@@ -1,0 +1,10 @@
+development:
+  adapter: postgis
+  database: ausite_development
+  username: yunwei
+  password:
+  host: localhost
+  script_dir: /usr/local/Cellar/postgis/2.0.2/share/postgis
+  su_username: yunwei
+  su_password: "']'"
+  

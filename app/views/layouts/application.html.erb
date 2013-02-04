@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aserver</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	
+<!-- header starts -->
+<%=render :partial=>'layouts/header'%>
+<!-- header ends -->
+ <br>
+<!-- site nav start -->
+<div class="row">
+ <div class="twelve columns">
+  <dl class="tabs headerlinkbar">
+    <dd <%=request.fullpath=='/' ? 'class="active"'.html_safe : ''%>><a href="/"><i class="foundicon-idea"></i> 灵感</a></dd>
+
+    <dd <%=request.fullpath.include?('/search') ? 'class="active"'.html_safe : ''%>><a href="/search"><i class="foundicon-search"></i> 搜索</a></dd>
+    <dd><a href="research.html"><i class="foundicon-graph"></i> 物业研究</a></dd>
+  </dl>
+ </div>
+ </div>
+<!-- site nav ends -->
+<%= yield %>
+
+</body>
+</html>
